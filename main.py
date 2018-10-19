@@ -62,6 +62,7 @@ def move(event,x,y, flags, param):
         cv2.imshow('Operation', target)
 
     if event == cv2.EVENT_LBUTTONUP and flag:
+        flag = False
         ori_255 = (dst_parsing * 255).astype("uint8")
         cv2.imshow("pic", dst)
         cv2.imshow("mask", inpainting_mask)
